@@ -140,6 +140,7 @@ export class TwodsixRollSettings {
       targetModifier: settings?.rollModifiers?.targetModifier ?? "key0",
       appliedEffects: {},
       chain: settings?.rollModifiers?.chain ?? 0,
+      occupation: settings?.rollModifiers?.occupation ?? 0,
       selectedSkill: aSkill?.uuid,
       skillLevelMax: settings?.rollModifiers?.skillLevelMax ?? undefined,
       armorModifier: settings?.rollModifiers?.armorModifier ?? 0,
@@ -239,6 +240,7 @@ export class TwodsixRollSettings {
           this.rollType = buttonHtml.find('[name="rollType"]').val();
           this.rollMode = buttonHtml.find('[name="rollMode"]').val();
           this.rollModifiers.chain = dialogData.skillRoll ? parseInt(buttonHtml.find('[name="rollModifiers.chain"]').val(), 10) : this.rollModifiers.chain;
+          this.rollModifiers.occupation = dialogData.skillRoll ? parseInt(buttonHtml.find('[name="rollModifiers.occupation"]').val(), 10) : this.rollModifiers.occupation;
           this.rollModifiers.characteristic = dialogData.skillRoll ? buttonHtml.find('[name="rollModifiers.characteristic"]').val() : this.rollModifiers.characteristic;
           this.rollModifiers.item = dialogData.itemRoll ? parseInt(buttonHtml.find('[name="rollModifiers.item"]').val(), 10) : this.rollModifiers.item;
           this.rollModifiers.rof = (dialogData.itemRoll && dialogData.rollModifiers.rof) ? parseInt(buttonHtml.find('[name="rollModifiers.rof"]').val(), 10) : this.rollModifiers.rof;

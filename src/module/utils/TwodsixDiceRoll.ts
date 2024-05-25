@@ -177,6 +177,9 @@ export class TwodsixDiceRoll {
     if (this.rollSettings.rollModifiers.chain) {
       returnValue.push("chain");
     }
+    if (this.rollSettings.rollModifiers.occupation) {
+      returnValue.push("occupation");
+    }
 
     // Add characteristic modifier
     if (this.rollSettings.rollModifiers.characteristic !== "NONE" && this.actor) {
@@ -315,6 +318,10 @@ export class TwodsixDiceRoll {
           case "other":
             flavorText += ` + ${description}`;
             flavorTable += `<tr><td>${description}</td><td>&mdash;</td>`;
+            break;
+          case "occupation":
+            flavorText += ` + ${description}`;
+            flavorTable += `<tr><td>${description}</td><td>${game.i18n.localize("TWODSIX.Chat.Roll.Bonus")}</td>`;
             break;
           default:
             break;

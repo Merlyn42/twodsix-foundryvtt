@@ -326,6 +326,7 @@
         "WeaponsRange": "Weapon Range",
         "ArmorModifier":"Armor Modifier",
         "Chain": "Chain / Assisted Roll",
+        "Occupation": "Occupation Bonus",
         "Bonus": "Bonus",
         "WithChainBonus": "with Chain / Assist bonus",
         "WinsRoll": "wins contested / opposed roll.",
